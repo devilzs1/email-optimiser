@@ -105,7 +105,7 @@ const Templates = () => {
           title="Close"
           size="large"
           component={Link}
-          to={`/templates`}
+          to={`/content/email-templates`}
         >
           <CloseIcon />
         </IconButton>

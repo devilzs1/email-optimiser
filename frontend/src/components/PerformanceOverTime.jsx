@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
-import { Card, CardContent, Typography, Select, MenuItem } from "@mui/material";
+import { Card, CardContent, Typography, Select, MenuItem, Stack, Chip } from "@mui/material";
 
 const initialData = {
   labels: Array.from({ length: 31 }, (_, i) => `July ${i + 1}`),
@@ -44,20 +44,33 @@ const Dashboard = () => {
     setData(newData);
   };
 
+
   return (
     <Card>
       <CardContent>
         <Typography variant="h5" component="div">
           Performance over time
         </Typography>
-        <Typography variant="body2">Open rate: 43% (⬇️32%)</Typography>
-        <Typography variant="body2">Emails sent: 1,568</Typography>
-        <Typography variant="body2">Email count: 49</Typography>
-        <Select value={data.datasets[0].label} onChange={handleChange}>
-          <MenuItem value="Open Rate">Open Rate</MenuItem>
-          <MenuItem value="Click Rate">Click Rate</MenuItem>
-          <MenuItem value="Unsubscribe Rate">Unsubscribe Rate</MenuItem>
-        </Select>
+        <Stack
+          p={2}
+          direction="row"
+          justifyContent="space-between"
+          alignItems={"center"}
+        >
+          <Stack>
+            <Typography variant="h6">Emails sent: 1,568</Typography>
+            {/* <Typography variant="body2">Open rate: 43% </Typography> */}
+            {/* <Chip color="success"/> */}
+          </Stack>
+          <Stack>
+            <label> Metric: </label>
+            <Select value={data.datasets[0].label} onChange={handleChange}>
+              <MenuItem value="Open Rate">Open Rate</MenuItem>
+              <MenuItem value="Click Rate">Click Rate</MenuItem>
+              <MenuItem value="Unsubscribe Rate">Unsubscribe Rate</MenuItem>
+            </Select>
+          </Stack>
+        </Stack>
         <div style={{ height: "400px" }}>
           <Line data={data} options={options} />
         </div>

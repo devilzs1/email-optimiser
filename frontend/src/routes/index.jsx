@@ -39,6 +39,8 @@ export default function Router() {
         { path: "app", element: <GeneralApp /> },
         { path: "content/email-templates", element: <Templates /> },
         { path: "campaigns/all-campaigns", element: <AllCampaigns /> },
+        { path: "analytics/marketing-dashboard", element: <Analytics /> },
+        { path: "analytics/reports", element: <Reports /> },
         { path: "404", element: <Page404 /> },
         { path: "*", element: <Navigate to="/404" replace /> },
       ],
@@ -87,5 +89,11 @@ const CreateCampaign = Loadable(
 );
 const AllCampaigns = Loadable(
   lazy(() => import("../pages/dashboard/AllCampaigns"))
+);
+const Analytics = Loadable(
+  lazy(() => import("../pages/dashboard/Analytics"))
+);
+const Reports = Loadable(
+  lazy(() => import("../pages/dashboard/Reports"))
 );
 const Page404 = Loadable(lazy(() => import("../pages/Page404")));

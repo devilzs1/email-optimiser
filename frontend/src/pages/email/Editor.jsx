@@ -1,46 +1,27 @@
 
 
 import { AppBar, Box, Button, Toolbar } from "@mui/material";
+import {  useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
-// import styled from "styled-components";
-
+import { useHtmlContent } from "../../context/HTMLContentContext";
 import EmailEditor from "react-email-editor";
 
 
 const Example = () => {
   const emailEditorRef = useRef(null);
-  const [preview, setPreview] = useState(false);
-
-  // const saveDesign = () => {
-  //   const unlayer = emailEditorRef.current?.editor;
-
-  //   unlayer?.saveDesign((design) => {
-  //     console.log("saveDesign", design);
-  //     alert("Design JSON has been logged in your developer console.");
-  //   });
-  // };
+  const navigate = useNavigate();
+  const { setHtmlContent } = useHtmlContent();
 
   const exportHtml = () => {
     const unlayer = emailEditorRef.current?.editor;
 
     unlayer?.exportHtml((data) => {
       const { design, html } = data;
-      console.log("exportHtml", html);
-      alert("Output HTML has been logged in your developer console.");
+      // console.log("exportHtml", html);
+      setHtmlContent(html);
+      navigate("/campaigns/create-campaign");
     });
   };
-
-  // const togglePreview = () => {
-  //   const unlayer = emailEditorRef.current?.editor;
-
-  //   if (preview) {
-  //     unlayer?.hidePreview();
-  //     setPreview(false);
-  //   } else {
-  //     unlayer?.showPreview("desktop");
-  //     setPreview(true);
-  //   }
-  // }
 
   const onDesignLoad = (data) => {
     console.log("onDesignLoad", data);

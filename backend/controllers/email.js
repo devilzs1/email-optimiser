@@ -2,7 +2,7 @@ const axios = require("axios");
 
 exports.sendEmail = async (req, res) => {
   try {
-    const { from, to, subject, template, variables } = req.body;
+    const { from, to, subject, html, variables } = req.body;
 
     const mailgunApiKey = process.env.MAILGUN_API_KEY;
     const mailgunDomain = process.env.MAILGUN_DOMAIN;
@@ -13,7 +13,7 @@ exports.sendEmail = async (req, res) => {
         from: `Your Company <mailgun@${mailgunDomain}>`,
         to: recipient,
         subject,
-        template,
+        html,
         "h:X-Mailgun-Variables": JSON.stringify(variables), // Optional: Pass variables for template
       },
       {

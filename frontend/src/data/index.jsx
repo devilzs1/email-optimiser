@@ -1,5 +1,11 @@
 import Automation from "../assets/Automation.jpg";
 import DesignEmail from "../assets/DesignEmail.jpg"
+import Basic from "../assets/basic.png";
+import Hero from "../assets/hero.png";
+import Sidebar from "../assets/sidebar.png";
+import SidebarHero from "../assets/sidebarHero.png";
+import Newsletter from "../assets/newsletter.png";
+
 // import DashboardIcon from "@mui/icons-material/Dashboard";
 import CampaignIcon from '@mui/icons-material/Campaign';
 import AutoModeIcon from '@mui/icons-material/AutoMode';
@@ -69,31 +75,43 @@ const templates = [
     id: 0,
     image: DesignEmail,
     name: "Start from scratch",
+    html: "",
     saved: false,
   },
   {
     id: 1,
-    image: DesignEmail,
-    name: "Bold",
-    saved: true,
+    image: Basic,
+    name: "Basic",
+    html: ``,
+    saved: false,
   },
   {
     id: 2,
-    image: DesignEmail,
-    name: "Minimal",
+    image: Hero,
+    name: "Hero",
+    html: ``,
     saved: false,
   },
   {
     id: 3,
-    image: DesignEmail,
-    name: "Simple Text",
+    image: Newsletter,
+    name: "Newsletter",
+    html: ``,
     saved: false,
   },
   {
     id: 4,
-    image: DesignEmail,
-    name: "Gallery",
+    image: Sidebar,
+    name: "Sidebar",
+    html: "",
     saved: true,
   },
-]
+  {
+    id: 5,
+    image: SidebarHero,
+    name: "Sidebar hero",
+    html: "",
+    saved: true,
+  },
+];
 export {sidebar, campaignHomeCard, templates}
