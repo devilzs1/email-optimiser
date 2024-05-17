@@ -17,6 +17,7 @@ export default function RHFTextField({ name, helperText, ...other }) {
         <TextField
           {...field}
           fullWidth
+          sx={{width: "320px"}}
           value={
             typeof field.value === "number" && field.value === 0
               ? ""

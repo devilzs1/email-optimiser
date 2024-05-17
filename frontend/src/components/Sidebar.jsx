@@ -64,7 +64,7 @@ const Sidebar = () => {
           paddingRight: "20px",
         }}
         component={Link}
-        to={`/create-campaign/home`}
+        to={`campaigns/home`}
       >
         <Stack
           direction="row"

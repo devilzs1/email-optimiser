@@ -19,7 +19,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const SaveDrawer = ({open, handleClose}) => {
+const TemplateDialog = ({open, handleClose}) => {
   const NameSchema = Yup.object().shape({
     name: Yup.string()
       .required("Template name is required!")
@@ -77,4 +77,4 @@ const SaveDrawer = ({open, handleClose}) => {
   );
 }
 
-export {SaveDrawer}
+export {TemplateDialog}
