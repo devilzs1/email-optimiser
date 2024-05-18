@@ -17,7 +17,7 @@ Before you begin, ensure you have met the following requirements:
 To install `email-optimiser`, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/devilzs1/email-optimiser.git`
-2. Navigate into the project directory: `cd email-optimiser`
+2. Navigate into the project directory: `cd email-optimiser/frontend`
 3. Install the dependencies: `npm install`
 
 ## Using email-optimiser
