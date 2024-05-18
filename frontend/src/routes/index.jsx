@@ -10,8 +10,6 @@ import LoadingScreen from "../components/LoadingScreen";
 import CampaignLayout from "../layouts/campaign";
 import EmailLayout from "../layouts/email";
 
-
-
 const Loadable = (Component) => {
   const LoadableComponent = (props) => {
     return (
@@ -72,28 +70,18 @@ export default function Router() {
 const GeneralApp = Loadable(
   lazy(() => import("../pages/dashboard/GeneralApp"))
 );
-const Templates = Loadable(
-  lazy(() => import("../pages/dashboard/Templates"))
-);
+const Templates = Loadable(lazy(() => import("../pages/dashboard/Templates")));
 const EmailTemplates = Loadable(
   lazy(() => import("../pages/email/EmailTemplates"))
 );
-const TemplateEditor = Loadable(
-  lazy(() => import("../pages/email/Editor"))
-);
-const CampaignHome = Loadable(
-  lazy(() => import("../pages/campaign/Home"))
-);
+const TemplateEditor = Loadable(lazy(() => import("../pages/email/CampaignEditor")));
+const CampaignHome = Loadable(lazy(() => import("../pages/campaign/Home")));
 const CreateCampaign = Loadable(
   lazy(() => import("../pages/campaign/CreateCampaign"))
 );
 const AllCampaigns = Loadable(
   lazy(() => import("../pages/dashboard/AllCampaigns"))
 );
-const Analytics = Loadable(
-  lazy(() => import("../pages/dashboard/Analytics"))
-);
-const Reports = Loadable(
-  lazy(() => import("../pages/dashboard/Reports"))
-);
+const Analytics = Loadable(lazy(() => import("../pages/dashboard/Analytics")));
+const Reports = Loadable(lazy(() => import("../pages/dashboard/Reports")));
 const Page404 = Loadable(lazy(() => import("../pages/Page404")));

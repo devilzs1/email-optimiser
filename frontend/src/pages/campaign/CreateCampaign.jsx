@@ -1,8 +1,7 @@
-import { AppBar, Box, Button, Stack, Toolbar, Typography, useMediaQuery } from '@mui/material'
+import { AppBar, Box, Button, Divider, Stack, Toolbar, Typography, useMediaQuery } from '@mui/material'
 import { Link } from 'react-router-dom';
 import {
   CreateForm,
-  FormStateProvider,
 } from "../../components/Campaign/CreateForm";
 
 const CreateCampaign = () => {
@@ -33,7 +32,7 @@ const CreateCampaign = () => {
                 borderRadius: "20px",
               }}
               component={Link}
-              to={`/email/templates`}
+              to={`/campaigns/all-campaigns`}
             >
               <Typography sx={{ textTransform: "capitalize", color: "#fff" }}>
                 Cancel
@@ -47,12 +46,10 @@ const CreateCampaign = () => {
         direction={isMediumScreen ? "column" : "row"}
         margin={"auto"}
         gap={4}
-        p={4}
+        p={isMediumScreen ? 4 : 1}
         sx={{ backgroundColor: "#fff" }}
       >
-        <FormStateProvider>
-          <CreateForm />
-        </FormStateProvider>
+        <CreateForm />
       </Stack>
     </Stack>
   );

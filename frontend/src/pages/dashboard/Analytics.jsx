@@ -5,7 +5,7 @@ import ConversionChart from "../../components/CoversionChart";
 import PerformanceOverTime from "../../components/PerformanceOverTime";
 
 const Analytics = () => {
-      const isMediumScreen = useMediaQuery("(max-width:728px)");
+  const isMediumScreen = useMediaQuery("(max-width:728px)");
   return (
     <Stack
       sx={{ backgroundColor: "#f5f8fa", height: "100%", width: "100%" }}

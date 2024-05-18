@@ -1,5 +1,6 @@
+
 import Automation from "../assets/Automation.jpg";
-import DesignEmail from "../assets/DesignEmail.jpg"
+import DesignEmail from "../assets/DesignEmail.jpg";
 import Basic from "../assets/basic.png";
 import Hero from "../assets/hero.png";
 import Sidebar from "../assets/sidebar.png";
@@ -7,68 +8,67 @@ import SidebarHero from "../assets/sidebarHero.png";
 import Newsletter from "../assets/newsletter.png";
 
 // import DashboardIcon from "@mui/icons-material/Dashboard";
-import CampaignIcon from '@mui/icons-material/Campaign';
-import AutoModeIcon from '@mui/icons-material/AutoMode';
+import CampaignIcon from "@mui/icons-material/Campaign";
+import AutoModeIcon from "@mui/icons-material/AutoMode";
 import InsightsIcon from "@mui/icons-material/Insights";
 import PeopleIcon from "@mui/icons-material/People";
-import FileCopyIcon from '@mui/icons-material/FileCopy';
+import FileCopyIcon from "@mui/icons-material/FileCopy";
 
 const sidebar = [
-//   {
-//     id: 0,
-//     icon: <DashboardIcon/>,
-//     title: "Dashboard",
-//     subItems: [],
-//   },
+  //   {
+  //     id: 0,
+  //     icon: <DashboardIcon/>,
+  //     title: "Dashboard",
+  //     subItems: [],
+  //   },
   {
     id: 1,
-    icon: <CampaignIcon/>,
+    icon: <CampaignIcon />,
     title: "Campaigns",
     subItems: ["All Campaigns"],
   },
   {
     id: 2,
-    icon: <AutoModeIcon/>,
+    icon: <AutoModeIcon />,
     title: "Automation",
     subItems: ["Overview", "All journeys", "Pre-built journeys"],
   },
   {
     id: 3,
-    icon: <InsightsIcon/>,
+    icon: <InsightsIcon />,
     title: "Analytics",
     subItems: ["Marketing dashboard", "Reports", "Custom reports"],
   },
   {
     id: 4,
-    icon: <PeopleIcon/>,
+    icon: <PeopleIcon />,
     title: "Audience",
     subItems: ["Audience dashboard", "All contacts", "Tags", "Segments"],
   },
   {
     id: 5,
-    icon: <FileCopyIcon/>,
+    icon: <FileCopyIcon />,
     title: "Content",
     subItems: ["Creative assistant", "My files", "Email templates"],
   },
 ];
 
 const campaignHomeCard = [
-    {
-        id: 0,
-        title: "Regular Email",
-        text: "use our email builder to launch a campaign in minutes.",
-        buttonText: "Design Email",
-        image: DesignEmail,
-    },
-    {
-        id: 1,
-        title: "Automation",
-        text: "Set up email automations that personalize your marketing and save you time.",
-        buttonText: "Create Automation",
-        image: Automation,
-    },
-]
-
+  {
+    id: 0,
+    title: "Regular Email",
+    text: "use our email builder to launch a campaign in minutes.",
+    buttonText: "Design Email",
+    image: DesignEmail,
+  },
+  {
+    id: 1,
+    title: "Automation",
+    text: "Set up email automations that personalize your marketing and save you time.",
+    buttonText: "Create Automation",
+    image: Automation,
+  },
+];
 
 const templates = [
   {
@@ -114,4 +114,4 @@ const templates = [
     saved: true,
   },
 ];
-export {sidebar, campaignHomeCard, templates}
+export { sidebar, campaignHomeCard, templates };

@@ -2,8 +2,6 @@
 
 A robust A/B testing platform to optimize email engagement metrics for a company's marketing campaign. This helps company regularly sends newsletters to its subscriber base and improve open rates, click-through rates (CTR), and overall engagement. It enable marketers to conduct A/B tests on various elements of their email campaigns and provide actionable insights for future optimizations.
 
-> #### Not completed yet!!! Working on it, have many confusions about the requirements!
-
 ## React + Vite + PWA Project
 
 This project is a progressive web application (PWA) built using React and Vite.

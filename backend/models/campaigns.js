@@ -1,10 +1,13 @@
 const mongoose = require("mongoose");
 
-const emailSchema = new mongoose.Schema(
+const campaignsSchema = new mongoose.Schema(
   {
     campaign_name:{
         type: String,
         required: true,
+    },
+    campaign_description:{
+        type: String,
     },
     from: {
       type: String,
@@ -18,15 +21,16 @@ const emailSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    template: {
+    html: {
       type: String,
       required: true,
     },
-    variables: {
+    design: {
       type: Object,
-    },
+      required: true,
+    }
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Email", emailSchema);
+module.exports = mongoose.model("Campaign", campaignsSchema);

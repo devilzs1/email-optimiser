@@ -1,9 +1,16 @@
-import { AppBar, Box, Button, Stack, Toolbar, Typography, useMediaQuery } from '@mui/material'
-import { Link } from 'react-router-dom';
-
+import {
+  AppBar,
+  Box,
+  Button,
+  Stack,
+  Toolbar,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Templates = () => {
-    const isMediumScreen = useMediaQuery("(max-width:728px)");
+  const isMediumScreen = useMediaQuery("(max-width:728px)");
 
   return (
     <Stack
@@ -25,36 +32,35 @@ const Templates = () => {
           width: `calc(100% - ${250}px)`,
         }}
       > */}
-        {/* <Toolbar> */}
-        <Stack
-          direction={isMediumScreen ? "column" : "row"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
+      {/* <Toolbar> */}
+      <Stack
+        direction={isMediumScreen ? "column" : "row"}
+        justifyContent={"space-between"}
+        alignItems={"center"}
+      >
+        <Typography variant="h2">Templates</Typography>
+        <Button
+          variant="contained"
+          sx={{
+            padding: "4px 20px",
+            borderRadius: "20px",
+            height: "2.5rem",
+            width: isMediumScreen ? "100%" : "auto",
+          }}
+          component={Link}
+          to={`/email/templates`}
         >
-          <Typography variant="h2">Templates</Typography>
-          <Button
-            variant="contained"
-            sx={{
-              padding: "4px 20px",
-              borderRadius: "20px",
-              height: "2.5rem",
-              width: isMediumScreen ? "100%" : "auto",
-            }}
-            component={Link}
-            to={`/email/templates`}
-          >
-            <Typography sx={{ textTransform: "capitalize" }}>
-              Create template
-            </Typography>
-          </Button>
+          <Typography sx={{ textTransform: "capitalize" }}>
+            Create template
+          </Typography>
+        </Button>
         {/* </Toolbar> */}
-      {/* </AppBar> */}
-        </Stack>
+        {/* </AppBar> */}
+      </Stack>
 
-
-      <Box mt={2}/>
+      <Box mt={2} />
     </Stack>
   );
-}
+};
 
-export default Templates
+export default Templates;

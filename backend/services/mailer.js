@@ -1,4 +1,3 @@
-
 const mailgun = require("mailgun-js");
 
 require("dotenv").config();
@@ -10,8 +9,8 @@ const data = {
   from: `Mailgun Sandbox <postmaster@{DOMAIN>`,
   to: "",
   subject: "Hello",
-//   template: "Gift Voucher",
-   html: "",
+  //   template: "Gift Voucher",
+  html: "",
   "o:tracking-opens": "yes",
   "o:tracking-clicks": "yes",
   "h:X-Mailgun-Variables": { test: "test" },

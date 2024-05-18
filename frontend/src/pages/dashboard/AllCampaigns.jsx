@@ -12,7 +12,6 @@ const AllCampaigns = () => {
     >
       <Stack
         direction={isMediumScreen ? "column" : "row"}
-        s
         justifyContent={"space-between"}
         alignItems={"center"}
       >

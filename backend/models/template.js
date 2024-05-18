@@ -6,12 +6,16 @@ const templateSchema = new mongoose.Schema(
       type: String,
         required: true,
     },
-    description: {
-      type: String,
-    //   required: true,
-    },
+    // description: {
+    //   type: String,
+    // //   required: true,
+    // },
     html: {
         type: String,
+        required: true,
+    },
+    design: {
+        type: Object,
         required: true,
     },
     saved_name:{
