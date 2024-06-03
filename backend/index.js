@@ -12,10 +12,6 @@ const PORT = process.env.PORT || 3000;
 
 
 // Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(mongosanitize());
-app.use(routes);
 app.use(
   cors({
     origin: "*",
@@ -23,8 +19,14 @@ app.use(
     credentials: true,
   })
 );
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(mongosanitize());
+app.use(routes);
 
-mongoose.connect('mongodb://localhost:27017/mydatabase').then(() => {
+const DB = process.env.DBURI.replace("<PASSWORD>", process.env.DBPASSWORD);
+
+mongoose.connect(DB).then(() => {
   console.log("Connected to MongoDB");
   // Start server
   app.listen(PORT, () => {
